@@ -1,0 +1,27 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'notes/style.css' %}">
+<div class="container">
+
+<div class="navbar">
+    <h2>My Notes</h2>
+
+    <form method="POST" action="{% url 'logout' %}">
+        {% csrf_token %}
+        <button class="logout-btn">Logout</button>
+    </form>
+</div>
+
+<a href="{% url 'add_note' %}">+ Add Note</a>
+
+{% for note in notes %}
+<div class="note">
+    <h3>{{ note.title }}</h3>
+    <p>{{ note.content }}</p>
+
+    <a href="{% url 'edit_note' note.id %}">Edit</a> |
+    <a href="{% url 'delete_note' note.id %}">Delete</a>
+</div>
+
+{% endfor %}
+
+</div>
