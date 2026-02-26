@@ -29,9 +29,11 @@ Users can register, log in, create notes, edit them, and manage their personal n
 ---
 
 ## 📂 Project Structure
+
+```
 notes_app/
 │
-├── notes/              # Main app
+├── notes/                # Main app
 │   ├── migrations/
 │   ├── templates/
 │   ├── models.py
@@ -39,7 +41,7 @@ notes_app/
 │   ├── urls.py
 │   └── forms.py
 │
-├── notes_project/      # Project settings
+├── notes_project/        # Project settings
 │   ├── settings.py
 │   ├── urls.py
 │   └── asgi.py
@@ -47,7 +49,7 @@ notes_app/
 ├── db.sqlite3
 ├── manage.py
 └── README.md
-
+```
 
 ---
 
